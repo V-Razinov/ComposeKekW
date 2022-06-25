@@ -17,6 +17,7 @@ import androidx.navigation.compose.rememberNavController
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
 import ru.mediasoft.core_navigation.router.RouterEvent
+import ru.mediasoft.core_ui.ui.BottomNav
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
@@ -53,7 +54,7 @@ class MainActivity : ComponentActivity() {
                     Scaffold(
                         modifier = Modifier.fillMaxSize(),
                         bottomBar = {
-                            BottomNavigation {
+                            BottomNav {
                                 bottomNavItems.forEach { navItem ->
                                     BottomNavigationItem(
                                         selected = navItem.destination.route == currentRoute,

@@ -14,8 +14,10 @@ dependencyResolutionManagement {
 }
 rootProject.name = "ComposePractise"
 
-include ':app',
-        ':core-network',
-        ':core-ui',
-        ':core',
-        ':core-navigation'
+include(
+    ":app",
+    ":core-network",
+    ":core-ui",
+    ":core",
+    ":core-navigation"
+)
